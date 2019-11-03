@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
 
 body {
 background-color: #bdbdbd;
@@ -6,35 +7,42 @@ background-color: #bdbdbd;
 }
 .topnav {
   background-color: #333;
-  overflow: hidden;
-  
+  overflow: hidden;  
 }
 
 header {
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: center;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: right;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   font-size: 18px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Staatliches', cursive;
+  text-decoration: none;
 
+}
+
+a {
+	float: left;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #7d7d7d;
+  background-color: #bf0202;
+  border-bottom: 4px solid;
+  border-color: #7d7d7d;
+  
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
+  border-bottom: 4px solid;
+  border-color: #bf0202;
   color: white;
 }
 
@@ -42,4 +50,21 @@ header {
 	width: 100px;
 	height: 100px;
 	cursor: pointer; 
+	float: right;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	color: white;
+	text-shadow: -1px 0 red, 0 1px red 1px 0 red, 0 -1px red;	
+}
+
+h1 {
+	font-size: 50px;
+}
+h1, h2 {
+	font-family: 'Staatliches', cursive;
+	text-align: center;
+	color: #bf0202;
 }
