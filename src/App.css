@@ -1,0 +1,67 @@
+body {
+  background-color: black;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+#special-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color:white;
+  text-align: center;
+}
+
+#glow-text {
+  color: white;
+  font-size: 6em;
+  text-transform: uppercase;
+  font-family: 'Jomolhari', serif;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+#glow-text:hover {
+  color: #0C77F3;
+  -webkit-animation: none;
+  animation: none;
+}
+
+
+#glow-text:hover {
+  color: #0C77F3;
+}
+
+/* coded added from previous -------------------------------------------------------------------- */
+
+/*glow for webkit*/
+
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0C77F3, 0 0 70px #0C77F3, 0 0 80px #0C77F3, 0 0 100px #0C77F3, 0 0 150px #0C77F3;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0C77F3, 0 0 35px #0C77F3, 0 0 40px #0C77F3, 0 0 50px #0C77F3, 0 0 75px #0C77F3;
+  }
+}
+
+/*glow for mozilla*/
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0C77F3, 0 0 70px #0C77F3, 0 0 80px #0C77F3, 0 0 100px #0C77F3, 0 0 150px #0C77F3;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0C77F3, 0 0 35px #0C77F3, 0 0 40px #0C77F3, 0 0 50px #0C77F3, 0 0 75px #0C77F3;
+  }
+}
+
+@media (max-width: 650px) {
+  #glow-text {
+    font-size: 3.5em;
+  }
+}
