@@ -1,15 +1,15 @@
 import './App.css';
+//import the state hook function
+// import React, { useState } from 'react';
+
+import NavBar from './components/NavBar';
+import HomePage from './components/HomePage';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <div class="centered">
-          <div id="glow-text">
-            Out The Box
-          </div>
-        </div>
-      </header>
+    <div>
+      <NavBar />
+      <HomePage />
     </div>
   );
 }
