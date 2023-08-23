@@ -7,13 +7,13 @@ import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div>
       <NavBar/>
       <HomePage/>
-      <AboutPage/>
     </div>
   );
 }

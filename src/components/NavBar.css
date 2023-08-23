@@ -29,6 +29,11 @@ header {
   width: 70px;
   margin-left: 10px;
   padding: 0;
+  filter: grayscale(0%);
+}
+
+#sneaker-logo:hover {
+  filter: grayscale(100%);
 }
 
 

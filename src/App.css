@@ -79,3 +79,17 @@ h1, h2, h3, p {
   border-radius: 50%;
   height: 350px;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+  padding: 10px;
+}
+
+footer > p {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
