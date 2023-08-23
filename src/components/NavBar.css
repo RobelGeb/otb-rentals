@@ -3,7 +3,7 @@
 
 
 .topnav {
-  background-color: #333;
+  background-color: black;
   overflow: hidden;
 }
 
@@ -26,10 +26,11 @@ header {
 
 #sneaker-logo {
   height: 50px;
-  width: 50px;
+  width: 70px;
   margin-left: 10px;
   padding: 0;
 }
+
 
 #home-nav {
 	float: left;
