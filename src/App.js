@@ -6,12 +6,14 @@ import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
+import AboutPage from './components/AboutPage';
 
 function App() {
   return (
     <div>
-      <NavBar />
-      <HomePage />
+      <NavBar/>
+      <HomePage/>
+      <AboutPage/>
     </div>
   );
 }
