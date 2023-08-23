@@ -1,5 +1,5 @@
 import './NavBar.css';
-import sneaker from '../img/black-sneaker.png';
+import sneaker from '../img/jordan1_white.svg';
 
 function NavBar() {
   return (
