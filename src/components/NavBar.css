@@ -3,7 +3,7 @@
 
 
 .topnav {
-  background-color: black;
+  background-color: #333;
   overflow: hidden;
 }
 
@@ -24,8 +24,19 @@ header {
 
 }
 
-a {
+#sneaker-logo {
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+  padding: 0;
+}
+
+#home-nav {
 	float: left;
+}
+
+a {
+  float: right;
 }
 
 /* Change the color of links on hover */
