@@ -2,7 +2,7 @@
 function Footer() {
   return (
     <footer>
-      <p>Developed by OTB Team © 2023</p>
+      <p>Out The Box © 2023</p>
     </footer>
   )
 }
