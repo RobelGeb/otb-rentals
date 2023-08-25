@@ -1,15 +1,13 @@
 import '../App.css';
+import NavBar from './NavBar';
 
 function HomePage() {
   return (
     <div>
-      <header>
-        <div class="centered">
-          <div id="glow-text">
-            Out The Box
-          </div>
-        </div>
-      </header>
+      <NavBar/>
+      <section id="home-page" class="centered">
+        <div id="glow-text">Out The Box</div>
+      </section>
     </div>
   );
 }

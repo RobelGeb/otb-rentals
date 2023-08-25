@@ -1,0 +1,44 @@
+body {
+  background-color: white;
+}
+
+#about-page {
+  background-color: white;
+  margin-top: 100px;
+}
+
+#mission-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, h3, p {
+  color: black;
+}
+
+#bp-image {
+  border-radius: 50%;
+  height: 350px;
+}
+
+#rg-image {
+  border-radius: 50%;
+  height: 350px;
+}
+
+#team-description > h2 {
+  text-align: center;
+}
+
+#team-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.team-member-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -3,8 +3,12 @@
 
 
 .topnav {
-  background-color: black;
-  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #333;
+  z-index: 1;
 }
 
 header {
@@ -18,6 +22,7 @@ header {
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
+  align-items: center;
   font-size: 18px;
   font-family: 'Staatliches', cursive;
   text-decoration: none;
@@ -28,7 +33,7 @@ header {
   height: 50px;
   width: 70px;
   margin-left: 10px;
-  padding: 0;
+
   filter: grayscale(0%);
 }
 
@@ -37,8 +42,10 @@ header {
 }
 
 
-#home-nav {
+#home-link {
 	float: left;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -50,7 +57,15 @@ a {
   background-color: #0C77F3;
   border-bottom: 4px solid;
   border-color: #7d7d7d;
+}
 
+.topnav #home-link:hover {
+	background-color: transparent;
+  border: none;
+}
+
+.topnav #home-link:active {
+  border: none;
 }
 
 /* Add a color to the active/current link */

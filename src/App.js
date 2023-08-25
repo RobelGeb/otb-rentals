@@ -1,20 +1,16 @@
 import './App.css';
-//import the state hook function
+// import the state hook function
 // import React, { useState } from 'react';
-
-// import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
-
-import NavBar from './components/NavBar';
+import { Routes, Route } from 'react-router-dom'
 import HomePage from './components/HomePage';
-// import AboutPage from './components/AboutPage';
-// import Footer from './components/Footer';
+import AboutPage from './components/AboutPage';
 
 function App() {
   return (
-    <div>
-      <NavBar/>
-      <HomePage/>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+    </Routes>
   );
 }
 
