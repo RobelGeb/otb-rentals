@@ -4,13 +4,7 @@ import sneakerpic from '../img/yeezy700.jpg'
 function SneakerList() {
   return(
     <div>
-        <SneakerItem 
-            brand="Nike" 
-            model="Air Force 1" 
-            sneakerImage={sneakerpic} 
-            condition="Good" 
-            price="$50"
-        />
+        <SneakerItem name="Yeezy 700 Wave Runner" sneakerImage={sneakerpic} condition="Good" price="$50"/>
     </div>
   );
 }
