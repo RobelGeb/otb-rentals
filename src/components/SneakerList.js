@@ -1,13 +1,11 @@
-import Sneaker from './SneakerItem.js';
+import SneakerItem from './SneakerItem.js';
 
 function SneakerList() {
-    const colors = [red, gray, black];
-    return(
-        <div>
-
-            <Sneaker colors={ colors }/>
-            <Sneaker colors={ colors }/>
-            <Sneaker colors={ colors }/>
-        </div>
-    );
+  return(
+    <div>
+        <SneakerItem brand="Nike" model="Air Force 1" SneakerItem="" condition="Good" price="$50"/>
+    </div>
+  );
 }
+
+export default SneakerList;
