@@ -1,7 +1,5 @@
 import './NavBar.css';
 import sneaker from '../img/blue-jordan-1.png';
-
-
 import { Link } from 'react-router-dom';
 
 function NavBar() {
