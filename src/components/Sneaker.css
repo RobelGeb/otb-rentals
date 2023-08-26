@@ -1,0 +1,26 @@
+img {
+    height: 300px;
+}
+
+.sneaker-grid {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 60px;
+}
+
+.sneaker-item {
+    width: 500px;
+}
+
+.condition-price {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    height: 40px;
+    align-items: flex-end;
+}
+
+#price {
+    justify-content: center;
+}
