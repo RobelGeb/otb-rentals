@@ -19,7 +19,7 @@ function SneakerList() {
   return(
     <div className='sneaker-grid'>
         <SneakerItem name="Adidas Yeezy Boost 700 Wave Runner (2017/2023)" sneakerImage={yeezy700} condition="Lightly Worn" price="$100"/>
-        <SneakerItem name="Adidas Yeezy Boost 350 V2 Black Red (2017/2020))" sneakerImage={yeezy350} condition="Lightly Worn" price="$100"/>
+        <SneakerItem name="Adidas Yeezy Boost 350 V2 Black Red (2017/2020)" sneakerImage={yeezy350} condition="Lightly Worn" price="$100"/>
         <SneakerItem name="Nike SB Dunk Low Ben & Jerry's Chunky Dunky" sneakerImage={benJerry} condition="Lightly Worn" price="$250"/>
 
         <SneakerItem name="Jordan 4 Retro Bred (2019)" sneakerImage={bred4} condition="Lightly Worn" price="$100"/>
