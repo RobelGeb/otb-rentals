@@ -1,4 +1,4 @@
-
+import '../App.css';
 function SearchBar() {
   return (
     <div id="search-bar-container">
