@@ -7,10 +7,12 @@ import Footer from './Footer';
 function RentalsPage() {
   return (
     <div>
-      <NavBar/>
-      <SearchBar/>
-      <SneakerList/>
-      <Footer/>
+      <div id="rental-body">
+        <NavBar/>
+        <SearchBar/>
+        <SneakerList/>
+        <Footer/>
+      </div>
     </div>
   )
 }

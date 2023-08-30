@@ -1,15 +1,19 @@
 body {
   background-color: black;
   font-family: 'Mulish', sans-serif;
+  margin: 0;
+}
+
+#rental-body {
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
-  display: block;
-  position: absolute;
   bottom: 0;
   background-color: #333;
-  width: 100%;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 footer > p {
@@ -74,14 +78,14 @@ footer > p {
 }
 
 input {
-  padding-left: 100px;
-  margin-top: 100px;
+  margin-left: 30px;
+  margin-top: 80px;
   color: color-gray-one;
-  box-shadow: 2px 3px 28px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 3px 28px 1px rgba(0, 0, 0, 0.2);
   border: 0px solid transparent;
   border-radius: 5px;
 
-  height: 50px;
+  height: 40px;
 
   transition: all .2s ease;
 
@@ -93,4 +97,15 @@ input {
       outline: none;
       box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.3);
   }
+}
+
+#search-btn {
+  height: 40px;
+  border: 1px solid #0C77F3;
+  background: #0C77F3;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
 }
