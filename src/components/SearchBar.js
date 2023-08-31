@@ -121,26 +121,17 @@ function SearchBar() {
   const [search, setSearch] = useState(sneakersJsonObject.sneakers);
   const handleSearch = (event) => {
     const searchResultsCopy = search.filter((kicks) => {
-
-      // setSearch(sneakersJsonObject.sneakers); // reset before doing another search
-
       let sneakerName = kicks.name.toLowerCase();
       let searchInput = change.toLowerCase(); // "change" stores input field value
       return sneakerName.includes(searchInput);
     });
 
-    console.log(searchResultsCopy);
     setSearch(searchResultsCopy); // set, update -> in this case "search"
   }
 
-  // TODO: Works but have to reset each time a select is picked
   const [select, setSelect] = useState(sneakersJsonObject.sneakers);
-
   const handleSelect = (event) => {
-
-    // setSelect(sneakersJsonObject.sneakers); // reset before doing another select
-
-    const selectResultsCopy = select.filter((kicks) => {
+    const selectResultsCopy = sneakersJsonObject.sneakers.filter((kicks) => {
       let selectedValue = event.target.value;
       if(selectedValue === "all" || kicks.brand === selectedValue) {
         return true;
