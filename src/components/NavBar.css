@@ -9,6 +9,7 @@
   left: 0;
   background-color: #333;
   z-index: 1;
+  transition: .5s ease-in-out;
 }
 
 header {
@@ -25,6 +26,7 @@ header {
   align-items: center;
   font-size: 18px;
   text-decoration: none;
+  transition: .15s ease-in-out;
 }
 
 #sneaker-logo {
