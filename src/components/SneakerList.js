@@ -3,21 +3,15 @@ import './Sneaker.css';
 
 function SneakerList(props) {
 
-
   let results = {};
   if(props.selectResults === undefined && props.searchResults === undefined) {
     // use default - show all
     results = props.originalResults;
-  } else if(props.selectResults === undefined) {
-    // use searchResults
-    results = props.searchResults;
+  } else if(props.searchResults !== undefined) {
+    results = props.searchResults; // use searchResults
   } else {
-    // use selectResults
-    results = props.selectResults;
+    results = props.selectResults; // use selectResults
   }
-
-  console.log(results);
-
 
   return(
     <div className='sneaker-grid'>

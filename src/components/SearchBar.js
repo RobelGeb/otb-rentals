@@ -117,15 +117,20 @@ function SearchBar() {
     setChange(event.target.value);
   }
 
-  // TODO: search not displaying on page but showing in console
+
   const [search, setSearch] = useState(sneakersJsonObject.sneakers);
-  const handleSearch = (event) => {
-    const searchResultsCopy = search.filter((kicks) => {
+  const handleSearch = () => {
+    const searchResultsCopy = sneakersJsonObject.sneakers.filter((kicks) => {
       let sneakerName = kicks.name.toLowerCase();
       let searchInput = change.toLowerCase(); // "change" stores input field value
-      return sneakerName.includes(searchInput);
+      if(sneakerName.includes(searchInput)) {
+        return true
+      } else {
+        return false;
+      }
     });
 
+    console.log(searchResultsCopy);
     setSearch(searchResultsCopy); // set, update -> in this case "search"
   }
 
