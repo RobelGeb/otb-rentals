@@ -18,6 +18,9 @@ import blackOwAf1 from '../img/sneakers/af1-ow-black.jpeg';
 import mcaOwAf1 from '../img/sneakers/af1-ow-mca.jpeg';
 import uncOw1 from '../img/sneakers/unc-ow-jordan-1.jpeg';
 
+//import fontawesome search icon
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 function SearchBar() {
 
@@ -143,7 +146,7 @@ function SearchBar() {
     <div>
       <div id="search-bar-container">
         <input id="search-bar-input" onChange={handleChange} placeholder="Search sneaker here..."/>
-        <button id="search-btn" onClick={handleSearch}>Search</button>
+        <button id="search-btn" onClick={handleSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
         <select id="filter" onChange={handleSelect}>
           <option value="all">Select a type</option>
           <option value="nike">Nike</option>
