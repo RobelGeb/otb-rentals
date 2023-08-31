@@ -118,7 +118,8 @@ function SearchBar() {
   }
 
 
-  const [search, setSearch] = useState(sneakersJsonObject.sneakers);
+  const [userInteraction, setResults] = useState(sneakersJsonObject.sneakers);
+
   const handleSearch = () => {
     const searchResultsCopy = sneakersJsonObject.sneakers.filter((kicks) => {
       let sneakerName = kicks.name.toLowerCase();
@@ -130,11 +131,9 @@ function SearchBar() {
       }
     });
 
-    console.log(searchResultsCopy);
-    setSearch(searchResultsCopy); // set, update -> in this case "search"
+    setResults(searchResultsCopy); // set, update -> in this case "search"
   }
 
-  const [select, setSelect] = useState(sneakersJsonObject.sneakers);
   const handleSelect = (event) => {
     const selectResultsCopy = sneakersJsonObject.sneakers.filter((kicks) => {
       let selectedValue = event.target.value;
@@ -145,7 +144,7 @@ function SearchBar() {
       }
     });
 
-    setSelect(selectResultsCopy); // set, update -> in this case "select"
+    setResults(selectResultsCopy); // set, update -> in this case "select"
   }
 
   return (
@@ -161,7 +160,7 @@ function SearchBar() {
         </select>
       </div>
 
-      <SneakerList originalResults={sneakersJsonObject.sneakers} searchResults={search} selectResults={select}/>
+      <SneakerList originalResults={sneakersJsonObject.sneakers} userResults={userInteraction} />
     </div>
   )
 }
