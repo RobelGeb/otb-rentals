@@ -8,7 +8,7 @@ import Footer from './Footer';
 
 function AboutPage() {
   return (
-    <div>
+    <div id="about">
       <NavBar/>
       <section id="about-page">
 
@@ -40,8 +40,8 @@ function AboutPage() {
             <div class="team-member-description">
               <h3>Robel Gebremichael (CEO), Software Engineer</h3>
               <img id="rg-image" src={rg} alt="Robel Gebremichael"/>
-              <p>
-                Recent University of Washington graduate (2023), received a degree in Human Centered Design (HCI).
+              <p id="rg-desc">
+                Recent University of Washington graduate (2023), received a degree in Human Centered Design and Engineering.
               </p>
             </div>
 

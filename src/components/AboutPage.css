@@ -2,9 +2,17 @@ body {
   background-color: white;
 }
 
+#about {
+  height: 100%;
+  display: flex;
+}
+
 #about-page {
   background-color: white;
   margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #mission-description {
@@ -25,6 +33,11 @@ h1, h2, h3, p {
 #rg-image {
   border-radius: 50%;
   height: 350px;
+}
+
+#rg-desc {
+  width: 550px;
+  text-align: center;
 }
 
 #team-description > h2 {

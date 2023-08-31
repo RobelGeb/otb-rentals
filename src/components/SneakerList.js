@@ -16,6 +16,7 @@ import mcaOwAf1 from '../img/sneakers/af1-ow-mca.jpeg';
 import uncOw1 from '../img/sneakers/unc-ow-jordan-1.jpeg';
 
 function SneakerList() {
+  
   return(
     <div className='sneaker-grid'>
         <SneakerItem name="Adidas Yeezy Boost 700 Wave Runner (2017/2023)" sneakerImage={yeezy700} condition="Lightly Worn" price="$100"/>
