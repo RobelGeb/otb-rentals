@@ -3,9 +3,8 @@ import './Sneaker.css';
 
 function SneakerList(props) {
 
-  console.log(props);
 
-  let results;
+  let results = {};
   if(props.selectResults === undefined && props.searchResults === undefined) {
     // use default - show all
     results = props.originalResults;
@@ -17,14 +16,14 @@ function SneakerList(props) {
     results = props.selectResults;
   }
 
-  /*
-  const sneakerItems = results.map((shoe) => {
-    return <SneakerItem key={shoe.id.toString()} name={shoe.name} sneakerImage={shoe.sneakerImage} condition={shoe.condition} price={shoe.price} brand ={shoe.brand} />;
-  })
-  */
+  console.log(results);
+
 
   return(
     <div className='sneaker-grid'>
+      {results && results.map((shoe) => {
+        return <SneakerItem key={shoe.id.toString()} name={shoe.name} sneakerImage={shoe.sneakerImage} condition={shoe.condition} price={shoe.price} brand ={shoe.brand} />;
+      })}
     </div>
   );
 }
