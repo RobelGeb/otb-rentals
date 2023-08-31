@@ -6,13 +6,14 @@ import { Link } from 'react-router-dom';
 
 {/* <FontAwesomeIcon icon={faCartShopping} size="lg" /> */}
 
-function NavBar() {
+function NavBar(props) {
+
   return (
     <header>
       <div class="topnav">
         <Link id="home-link" to="/"><img id="sneaker-logo" src={sneaker} alt="sneaker logo"/></Link>
         
-        <Link to="/cart"> Items in cart </Link>
+        <Link to="/cart"> {props.cartItems} </Link>
         <Link to="/support">SUPPORT</Link>
         <Link to="/about">ABOUT</Link>
         <Link to="/rentals">RENTALS</Link>
