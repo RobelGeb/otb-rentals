@@ -1,28 +1,64 @@
 import React, { useState } from 'react';
-import yeezy350 from '../img/sneakers/yeezy-350-bred.jpeg';
 import Footer from './Footer';
 import NavBar from './NavBar';
 import SneakerItem from './SneakerItem';
-// import AddButton from './AddButton';
+import AddButton from './AddButton';
 import './ProductPage.css';
+import ProductCarousel from './ProductCarousel';
 // import SearchBar from './SearchBar';
 
-function ProductPage () {
-    const [items, setItems] = useState(0);
+// import sneaker images from folder
+import yeezy700 from '../img/sneakers/yeezy-700-waverunner.jpeg';
+import yeezy350 from '../img/sneakers/yeezy-350-bred.jpeg';
+import uncOw1 from '../img/sneakers/unc-ow-jordan-1.jpeg';
 
-    const addToCart = function(event) {
-        setItems(items + 1);
-        console.log(items);
-    }
+function ProductPage () {
     
+    const images = [
+        {
+          id: 0,
+          name: "yeezy350",
+          original: yeezy350,
+          thumbnail: yeezy350,
+          quantity: 0
+        },
+        {
+          id: 1,
+          name: "yeezy700",
+          original: yeezy700,
+          thumbnail: yeezy700,
+          quantity: 0
+        },
+        {
+          id: 2,
+          name: "uncOw1",
+          original: uncOw1,
+          thumbnail: uncOw1,
+          quantity: 0
+        },
+    ];
+    
+    //counts how many items are added to the cart at one time
+    const [items, setItems] = useState(0);
+    //items in the cart w/ their frequencies
+    const [shoeNames, setShoeNames] = useState(new Map());
+    //which image is currently the thumbnail
+    const[sliderData, setSliderData] = useState(images[0]);
+
     return (
         <div id="product">
-            <NavBar cartItems={items}/>
-            {/* <SearchBar/> */}
+            <NavBar shoeNames={shoeNames}/>
+            {/* <SearchBar/> will go above the product page so users can search for other shoes*/}
             <div>
-                <SneakerItem name="Adidas Yeezy Boost 350 V2 Black Red (2017/2020)" sneakerImage={yeezy350} condition="Lightly Worn" price="$100"/>
+                <ProductCarousel sliderData={sliderData} setSliderData={setSliderData} images={images}/>
                 <div>
-                    <button onClick={addToCart}> Add to cart </button>
+                    <AddButton 
+                        items={items} 
+                        setItems={setItems} 
+                        shoeNames={shoeNames}
+                        setShoeNames={setShoeNames}
+                        sliderData={sliderData}
+                    />
                 </div>
             </div>
             <Footer/>

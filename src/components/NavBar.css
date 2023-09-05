@@ -41,7 +41,6 @@ header {
   filter: grayscale(100%);
 }
 
-
 #home-link {
 	float: left;
   padding: 0;
@@ -73,4 +72,16 @@ a {
   border-bottom: 4px solid;
   border-color: #0C77F3;
   color: white;
+}
+
+/* ------- popup styling -------- */
+#cart {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#popup {
+  display: flex;
+  flex-direction: column;
+
 }

@@ -5,7 +5,7 @@
     justify-content: space-between;
 }
 
-button {
+#add {
   height: 40px;
   border: 1px solid #0C77F3;
   background: #0C77F3;
@@ -14,4 +14,24 @@ button {
   cursor: pointer;
   font-size: 14px;
   border-radius: 3px;
+  transition: 0.2s ease-in-out;
+  width: 110px;
+}
+
+#add:hover {
+  height: 42px;
+  width: 111px;
+  background: white;
+  color: #0C77F3;
+}
+
+#slider {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+#thumbnail {
+  height: 500px;
+  width: 500px;
 }
