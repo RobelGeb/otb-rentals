@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import Footer from './Footer';
 import NavBar from './NavBar';
-import SneakerItem from './SneakerItem';
 import AddButton from './AddButton';
 import './ProductPage.css';
 import ProductCarousel from './ProductCarousel';
-// import SearchBar from './SearchBar';
+import SearchBar from './SearchBar';
 
 // import sneaker images from folder
 import yeezy700 from '../img/sneakers/yeezy-700-waverunner.jpeg';
@@ -13,7 +12,7 @@ import yeezy350 from '../img/sneakers/yeezy-350-bred.jpeg';
 import uncOw1 from '../img/sneakers/unc-ow-jordan-1.jpeg';
 
 function ProductPage () {
-    
+
     const images = [
         {
           id: 0,
@@ -37,7 +36,7 @@ function ProductPage () {
           quantity: 0
         },
     ];
-    
+
     //counts how many items are added to the cart at one time
     const [items, setItems] = useState(0);
     //items in the cart w/ their frequencies
@@ -48,13 +47,13 @@ function ProductPage () {
     return (
         <div id="product">
             <NavBar shoeNames={shoeNames}/>
-            {/* <SearchBar/> will go above the product page so users can search for other shoes*/}
+            <SearchBar productData={'product'} />
             <div>
                 <ProductCarousel sliderData={sliderData} setSliderData={setSliderData} images={images}/>
                 <div>
-                    <AddButton 
-                        items={items} 
-                        setItems={setItems} 
+                    <AddButton
+                        items={items}
+                        setItems={setItems}
                         shoeNames={shoeNames}
                         setShoeNames={setShoeNames}
                         sliderData={sliderData}

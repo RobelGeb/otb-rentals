@@ -1,9 +1,8 @@
 //import the state hook function
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import '../App.css';
-
 import SneakerList from './SneakerList';
-
 // import sneaker images from folder
 import yeezy700 from '../img/sneakers/yeezy-700-waverunner.jpeg';
 import yeezy350 from '../img/sneakers/yeezy-350-bred.jpeg';
@@ -17,14 +16,13 @@ import travisLowMocha from '../img/sneakers/travis-low-mocha.jpeg';
 import blackOwAf1 from '../img/sneakers/af1-ow-black.jpeg';
 import mcaOwAf1 from '../img/sneakers/af1-ow-mca.jpeg';
 import uncOw1 from '../img/sneakers/unc-ow-jordan-1.jpeg';
-
 //import fontawesome search icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-function SearchBar() {
+function SearchBar(props) {
 
-  let sneakersJsonObject = {
+  let sneakerData = {
     'sneakers' : [{
       "id": 1,
       "name": "Adidas Yeezy Boost 700 Wave Runner (2017/2023)",
@@ -110,32 +108,45 @@ function SearchBar() {
       "price": "$300",
       "brand": "jordan"
     }]
+  };
+
+  let dataObject = [];
+
+  if(props.productData !== 'product') {
+    dataObject = sneakerData.sneakers;
   }
 
-  const [change, setChange] = useState("");
-  const handleChange = (event) => {
-    setChange(event.target.value);
+  const [userInteraction, setResults] = useState(dataObject);
+  let callbackKeyDown = (event) => {
+    if(event.key === "Enter") {
+      const inputResultsCopy = dataObject.filter((kicks) => {
+        let sneakerName = kicks.name.toLowerCase();
+        let userInput = event.target.value.toLowerCase();
+        if(sneakerName.includes(userInput))  {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      setResults(inputResultsCopy); // set, update -> in this case "input" on 'Enter' key
+    }
   }
 
-
-  const [userInteraction, setResults] = useState(sneakersJsonObject.sneakers);
-
-  const handleSearch = () => {
-    const searchResultsCopy = sneakersJsonObject.sneakers.filter((kicks) => {
+  let callbackSearch = () => {
+    const searchResultsCopy = dataObject.filter((kicks) => {
       let sneakerName = kicks.name.toLowerCase();
-      let searchInput = change.toLowerCase(); // "change" stores input field value
+      let searchInput = id('search-bar-input').value.toLowerCase(); // "change" stores input field value
       if(sneakerName.includes(searchInput)) {
         return true
       } else {
         return false;
       }
     });
-
     setResults(searchResultsCopy); // set, update -> in this case "search"
   }
 
-  const handleSelect = (event) => {
-    const selectResultsCopy = sneakersJsonObject.sneakers.filter((kicks) => {
+  let callbackSelect = (event) => {
+    const selectResultsCopy = dataObject.filter((kicks) => {
       let selectedValue = event.target.value;
       if(selectedValue === "all" || kicks.brand === selectedValue) {
         return true;
@@ -143,16 +154,42 @@ function SearchBar() {
         return false;
       }
     });
-
     setResults(selectResultsCopy); // set, update -> in this case "select"
+  }
+
+  let navigate = useNavigate();
+  const changeToRentalOnEnter = (event) => {
+    if(event.key === 'Enter') {
+      navigate("../rentals");
+    }
+  };
+
+  const changeToRentals = () => {
+    navigate("../rentals");
+  }
+
+  if(props.productData === 'product') {
+    callbackKeyDown = changeToRentalOnEnter;
+    callbackSearch = changeToRentals;
+    callbackSelect = changeToRentals;
+  }
+
+  /**
+   * Finds the element with the specified ID attribute
+   *
+   * @param {string} id element ID
+   * @returns {HTMLElement} DOM object associated with id.
+   */
+  function id(id) {
+    return document.getElementById(id);
   }
 
   return (
     <div>
       <div id="search-bar-container">
-        <input id="search-bar-input" onChange={handleChange} placeholder="Search sneaker here..."/>
-        <button id="search-btn" onClick={handleSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-        <select id="filter" onChange={handleSelect}>
+        <input id="search-bar-input" onKeyDown={callbackKeyDown} placeholder="Search sneaker here..."/>
+        <button id="search-btn" onClick={callbackSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+        <select id="filter" onChange={callbackSelect}>
           <option value="all">Select a type</option>
           <option value="nike">Nike</option>
           <option value="jordan">Jordan</option>
@@ -160,7 +197,7 @@ function SearchBar() {
         </select>
       </div>
 
-      <SneakerList originalResults={sneakersJsonObject.sneakers} userResults={userInteraction} />
+      <SneakerList originalResults={sneakerData.sneakers} userResults={userInteraction} />
     </div>
   )
 }

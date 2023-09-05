@@ -5,11 +5,12 @@ import SearchBar from "./SearchBar";
 import Footer from './Footer';
 
 function RentalsPage() {
+
   return (
     <div>
       <div id="rental-body">
         <NavBar/>
-        <SearchBar/>
+        <SearchBar />
         <SneakerList/>
         <Footer/>
       </div>
