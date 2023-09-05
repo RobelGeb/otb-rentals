@@ -10,7 +10,7 @@ function SneakerList(props) {
   }
 
   return(
-    <div className='sneaker-grid'>
+    <div class='sneaker-grid'>
       {userResults && userResults.map((shoe) => {
         return <SneakerItem key={shoe.id.toString()} name={shoe.name} sneakerImage={shoe.sneakerImage} condition={shoe.condition} price={shoe.price} brand ={shoe.brand} />;
       })}

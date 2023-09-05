@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Footer from './Footer';
 import NavBar from './NavBar';
-import SneakerItem from './SneakerItem';
 import AddButton from './AddButton';
 import './ProductPage.css';
 import ProductCarousel from './ProductCarousel';
