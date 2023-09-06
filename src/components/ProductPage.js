@@ -7,6 +7,9 @@ import ProductCarousel from './ProductCarousel';
 import SearchBar from './SearchBar';
 import Sneakers from '../data.json';
 
+import {useLocation} from 'react-router-dom';
+
+
 // import yeezy350pics 
 import yeezy350side from '../img/sneakers/yeezy350/yeezy350bred_side.png';
 import yeezy350rear from '../img/sneakers/yeezy350/yeezy350bred_rear.png';
@@ -14,20 +17,24 @@ import yeezy350rear from '../img/sneakers/yeezy350/yeezy350bred_rear.png';
 function ProductPage (props) {
 
 
-// var mage = JSON.parse(Sneakers);
-// console.log(JSON.parse(Sneakers));
+    // var mage = JSON.parse(Sneakers);
+    // console.log(JSON.parse(Sneakers));
 
 
-const result = JSON.stringify(Sneakers);
+    const result = JSON.stringify(Sneakers);
 
-//console.log(JSON.parse(result));
+    //console.log(JSON.parse(result));
 
-const parse_result = JSON.parse(result);
+    const parse_result = JSON.parse(result);
+    const imgurl = parse_result[0].sneakerImage;
 
-const imgurl = parse_result[0].sneakerImage;
+    // const sneakmap = new Map(Object.entries(JSON.parse(Sneakers)));
+    // console.log(sneakmap);
 
-// const sneakmap = new Map(Object.entries(JSON.parse(Sneakers)));
-// console.log(sneakmap);
+    const location = useLocation()
+
+
+    console.log(location.state.name);
 
 
     const images = [

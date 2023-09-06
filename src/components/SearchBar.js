@@ -13,7 +13,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 function SearchBar(props) {
 
-  let dataObject = Sneakers.sneakers;
+  let dataObject = Sneakers;
 
   let [userInteraction, setResults] = useState(dataObject);
   // let navigate = useNavigate();
@@ -113,7 +113,7 @@ function SearchBar(props) {
         </select>
       </div>
 
-      <SneakerList originalResults={Sneakers.sneakers} userResults={userInteraction} />
+      <SneakerList originalResults={Sneakers} userResults={userInteraction} />
     </div>
   )
 }

@@ -10,10 +10,16 @@ function SneakerList(props) {
     userResults = props.originalResults;
   }
 
+  
+
   return(
     <div class='sneaker-grid'>
       {userResults && userResults.map((shoe) => {
-        return <Link to="/shoe">
+        // const newTo = {
+        //   pathname: "/shoe" + shoe.name,
+        //   image: shoe.SneakerImage
+        // };
+        return <Link to="/shoe" state={{name: shoe.name.toString()}}>
                 <SneakerItem key={shoe.id.toString()} 
                   name={shoe.name} 
                   sneakerImage={shoe.sneakerImage} 
