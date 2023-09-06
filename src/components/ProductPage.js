@@ -42,22 +42,22 @@ function ProductPage (props) {
         {
           id: 0,
           name: "yeezy350",
-          original: imgurl,
-          thumbnail: imgurl,
+          original: location.state.image,
+          thumbnail: location.state.image,
           quantity: 0
         },
         {
           id: 1,
           name: "yeezy700",
-          original: imgurl,
-          thumbnail: imgurl,
+          original: location.state.image,
+          thumbnail: location.state.image,
           quantity: 0
         },
         {
           id: 2,
           name: "uncOw1",
-          original: imgurl,
-          thumbnail: imgurl,
+          original: location.state.image,
+          thumbnail: location.state.image,
           quantity: 0
         },
     ];
@@ -82,12 +82,16 @@ function ProductPage (props) {
     ];
 
     //which image is currently the thumbnail
-    const[sliderData, setSliderData] = useState(yeezy350pics[0]);
+    const[sliderData, setSliderData] = useState(images[0]);
 
     return (
         <div id="product">
             <NavBar cart={props.cart}/>
             <SearchBar productData={'product'} />
+            <div>
+                <h1>{location.state.name}</h1>
+                {location.state.price}
+            </div>
             <div>
                 <ProductCarousel 
                     images={images}
@@ -97,7 +101,7 @@ function ProductPage (props) {
                     <AddButton
                         cart={props.cart}
                         setCart={props.setCart}
-                        shoeName={imgurl}
+                        shoeName={location.state.name}
                     />
                 </div>
             </div>
