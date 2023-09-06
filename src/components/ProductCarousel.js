@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ProductPage.css';
+
 //import ReactImageGallery from 'react-image-gallery';
 //import 'react-image-gallery/styles/css/image-gallery.css';
 
@@ -7,7 +8,6 @@ import './ProductPage.css';
 function ProductCarousel (props) {
 
     function handleClick(index) {
-        
         const slider = props.images[index];
         props.setSliderData(slider);
         console.log(slider);
