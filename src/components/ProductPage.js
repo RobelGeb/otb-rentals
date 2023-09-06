@@ -22,6 +22,10 @@ import travisLowMocha from '../img/sneakers/travis-low-mocha.jpeg';
 import blackOwAf1 from '../img/sneakers/af1-ow-black.jpeg';
 import mcaOwAf1 from '../img/sneakers/af1-ow-mca.jpeg';
 
+// import yeezy350pics
+import yeezy350side from '../img/sneakers/yeezy350/yeezy350bred_side.png';
+import yeezy350rear from '../img/sneakers/yeezy350/yeezy350bred_rear.png'
+
 function ProductPage () {
 
     let sneakersJsonObject = {
@@ -138,26 +142,44 @@ function ProductPage () {
         },
     ];
 
+    const yeezy350pics = [
+        {
+            id: 0,
+            thumbnail: yeezy350,
+            name: 'yeezy350'
+        },
+        {
+            id: 1,
+            thumbnail: yeezy350side,
+            name: 'yeezy350'
+        },
+        {
+            id: 2,
+            thumbnail: yeezy350rear,
+            name: 'yeezy350'
+        }
+    ];
+
     //counts how many items are added to the cart at one time
     const [items, setItems] = useState(0);
     //items in the cart w/ their frequencies
     const [shoeNames, setShoeNames] = useState(new Map());
     //which image is currently the thumbnail
-    const[sliderData, setSliderData] = useState(images[0]);
+    const[sliderData, setSliderData] = useState(yeezy350pics[0]);
 
     return (
         <div id="product">
             <NavBar shoeNames={shoeNames}/>
             <SearchBar productData={'product'}/>
             <div>
-                <ProductCarousel sliderData={sliderData} setSliderData={setSliderData} images={images}/>
+                <ProductCarousel sliderData={sliderData} setSliderData={setSliderData} images={yeezy350pics}/>
                 <div>
                     <AddButton
                         items={items}
                         setItems={setItems}
                         shoeNames={shoeNames}
                         setShoeNames={setShoeNames}
-                        sliderData={sliderData}
+                        shoeName={yeezy350pics[0].name}
                     />
                 </div>
             </div>

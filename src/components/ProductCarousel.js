@@ -14,11 +14,11 @@ function ProductCarousel (props) {
     }
     return (
         <div id="slider">
-            <img id="thumbnail" src={props.sliderData.original} height="400" alt="" />
+            <img id="thumbnail" src={props.sliderData.thumbnail} height="400" alt="" />
             <div>
                 {
                     props.images.map(
-                        (data,i) => <img key={data.id} src={data.original} onClick={() => handleClick(i)} height="200" alt="" />
+                        (data,i) => <img key={data.id} src={data.thumbnail} onClick={() => handleClick(i)} height="200" alt="" />
                     )
                 }                
             </div>
