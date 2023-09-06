@@ -8,9 +8,7 @@ function SneakerItem(props) {
         <div class="condition-price">
           <p class="condition-price">{ props.condition }</p>
           <p class="condition-price" id="price">{ props.price }</p>
-          <p>{props.brand}</p>
         </div>
-
     </div>
   )
 }

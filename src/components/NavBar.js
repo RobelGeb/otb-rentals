@@ -17,7 +17,7 @@ function NavBar(props) {
     <header>
       <div class="topnav">
         <Link id="home-link" to="/"><img id="sneaker-logo" src={sneaker} alt="sneaker logo"/></Link>
-          <Link to="/cart" id="cart" onMouseEnter={() => setShowCart(true)} onMouseLeave={() => setShowCart(false)}> 
+          <Link to="/cart" id="cart" onMouseEnter={() => setShowCart(true)} onMouseLeave={() => setShowCart(false)}>
             <div id="cart-total">
               <FontAwesomeIcon icon={faCartShopping} size="lg"/>
             </div>
@@ -26,7 +26,7 @@ function NavBar(props) {
                 showCart && cartContents
               }
             </div>
-          </Link>        
+          </Link>
         <Link to="/support">SUPPORT</Link>
         <Link to="/about">ABOUT</Link>
         <Link to="/rentals">RENTALS</Link>

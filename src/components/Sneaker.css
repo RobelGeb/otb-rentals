@@ -19,6 +19,7 @@ img {
     width: inherit;
     height: 40px;
     align-items: flex-end;
+    color: blue;
 }
 
 #price {
