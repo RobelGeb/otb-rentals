@@ -5,13 +5,11 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
-
-
 function NavBar(props) {
 
   const[showCart, setShowCart] = useState(false);
-  const[cartContents, setCartContents] = useState("");
 
+  console.log(props.cart);
 
   return (
     <header>
@@ -23,7 +21,7 @@ function NavBar(props) {
             </div>
             <div id="cart-items">
               {
-                showCart && cartContents
+                showCart && props.cart
               }
             </div>
           </Link>        

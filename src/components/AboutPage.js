@@ -5,10 +5,10 @@ import './AboutPage.css';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
-function AboutPage() {
+function AboutPage(props) {
   return (
     <div id="about">
-      <NavBar/>
+      <NavBar cart={props.cart}/>
       <section id="about-page">
 
         <div id="mission-description">

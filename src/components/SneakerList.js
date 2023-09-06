@@ -13,7 +13,7 @@ function SneakerList(props) {
   return(
     <div class='sneaker-grid'>
       {userResults && userResults.map((shoe) => {
-        return <Link to="/shoe">
+        return <Link to={shoe.name}>
                 <SneakerItem key={shoe.id.toString()} 
                   name={shoe.name} 
                   sneakerImage={shoe.sneakerImage} 

@@ -23,11 +23,11 @@ function AddButton(props) {
     const addToCart = function(event) {
         //props.setItems(props.items + 1);
         //console.log(props.items);
-        let cartMap = props.shoeNames;
+        let cartMap = props.cart;
         
         //if there's already that shoe in the cart, add even more onto that based on how many times
         //the "add to cart" button was clicked. else, just add from 0.
-        if (props.shoeNames.has(props.shoeName)) {
+        if (props.cart.has(props.shoeName)) {
 
             cartMap.set(props.shoeName, cartMap.get(props.shoeName) + 1);
         } else {
@@ -35,8 +35,8 @@ function AddButton(props) {
         }
         //update the stuff in the cart with 
         //a key/value pair (shoe/quatity)
-        props.setShoeNames(cartMap);
-        console.log(props.shoeNames);
+        props.setCart(cartMap);
+        console.log(props.cart);
     }
     return (
         <div>

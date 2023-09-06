@@ -4,12 +4,12 @@ import NavBar from './NavBar';
 import SearchBar from "./SearchBar";
 import Footer from './Footer';
 
-function RentalsPage() {
+function RentalsPage(props) {
 
   return (
     <div>
       <div id="rental-body">
-        <NavBar/>
+        <NavBar cart={props.cart}/>
         <SearchBar />
         <SneakerList/>
         <Footer/>

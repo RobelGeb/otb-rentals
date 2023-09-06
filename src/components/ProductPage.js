@@ -6,6 +6,8 @@ import './ProductPage.css';
 import ProductCarousel from './ProductCarousel';
 import SearchBar from './SearchBar';
 
+
+
 // import sneaker images from folder
 import yeezy700 from '../img/sneakers/yeezy-700-waverunner.jpeg';
 import yeezy350 from '../img/sneakers/yeezy-350-bred.jpeg';
@@ -25,7 +27,7 @@ import mcaOwAf1 from '../img/sneakers/af1-ow-mca.jpeg';
 import yeezy350side from '../img/sneakers/yeezy350/yeezy350bred_side.png';
 import yeezy350rear from '../img/sneakers/yeezy350/yeezy350bred_rear.png'
 
-function ProductPage () {
+function ProductPage (props) {
 
     let sneakersJsonObject = {
         'sneakers' : [{
@@ -115,8 +117,6 @@ function ProductPage () {
         }]
       }
 
-
-
     const images = [
         {
           id: 0,
@@ -159,25 +159,19 @@ function ProductPage () {
         }
     ];
 
-    //counts how many items are added to the cart at one time
-    const [items, setItems] = useState(0);
-    //items in the cart w/ their frequencies
-    const [shoeNames, setShoeNames] = useState(new Map());
     //which image is currently the thumbnail
     const[sliderData, setSliderData] = useState(yeezy350pics[0]);
 
     return (
         <div id="product">
-            <NavBar shoeNames={shoeNames}/>
-            <SearchBar productData={'product'}/>
+            <NavBar cart={props.cart}/>
+            <SearchBar productData={'product'} />
             <div>
                 <ProductCarousel sliderData={sliderData} setSliderData={setSliderData} images={yeezy350pics}/>
                 <div>
                     <AddButton
-                        items={items}
-                        setItems={setItems}
-                        shoeNames={shoeNames}
-                        setShoeNames={setShoeNames}
+                        cart={props.cart}
+                        setCart={props.setCart}
                         shoeName={yeezy350pics[0].name}
                     />
                 </div>
