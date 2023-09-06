@@ -110,15 +110,21 @@ function SearchBar(props) {
     }]
   };
 
-  let dataObject = [];
+  let dataObject = sneakerData.sneakers;
 
-  if(props.productData !== 'product') {
-    dataObject = sneakerData.sneakers;
-  }
+  let [userInteraction, setResults] = useState(dataObject);
+  // let navigate = useNavigate();
 
-  const [userInteraction, setResults] = useState(dataObject);
-  let callbackKeyDown = (event) => {
+  const callbackKeyDown = (event) => {
     if(event.key === "Enter") {
+
+      // TODO: Need to fix, show results when navigating back to rental page
+      /*
+      if(props.productData === 'product') {
+        navigate("../rentals");
+      }
+      */
+
       const inputResultsCopy = dataObject.filter((kicks) => {
         let sneakerName = kicks.name.toLowerCase();
         let userInput = event.target.value.toLowerCase();
@@ -128,11 +134,21 @@ function SearchBar(props) {
           return false;
         }
       });
+
       setResults(inputResultsCopy); // set, update -> in this case "input" on 'Enter' key
+
     }
   }
 
-  let callbackSearch = () => {
+  const callbackSearch = () => {
+
+    // TODO: Need to fix, show results when navigating back to rental page
+    /*
+    if(props.productData === 'product') {
+      navigate("../rentals");
+    }
+    */
+
     const searchResultsCopy = dataObject.filter((kicks) => {
       let sneakerName = kicks.name.toLowerCase();
       let searchInput = id('search-bar-input').value.toLowerCase(); // "change" stores input field value
@@ -142,10 +158,19 @@ function SearchBar(props) {
         return false;
       }
     });
+
     setResults(searchResultsCopy); // set, update -> in this case "search"
   }
 
-  let callbackSelect = (event) => {
+  const callbackSelect = (event) => {
+
+    // TODO: Need to fix, show results when navigating back to rental page
+    /*
+    if(props.productData === 'product') {
+      navigate("../rentals");
+    }
+    */
+
     const selectResultsCopy = dataObject.filter((kicks) => {
       let selectedValue = event.target.value;
       if(selectedValue === "all" || kicks.brand === selectedValue) {
@@ -154,24 +179,12 @@ function SearchBar(props) {
         return false;
       }
     });
+
     setResults(selectResultsCopy); // set, update -> in this case "select"
   }
 
-  let navigate = useNavigate();
-  const changeToRentalOnEnter = (event) => {
-    if(event.key === 'Enter') {
-      navigate("../rentals");
-    }
-  };
-
-  const changeToRentals = () => {
-    navigate("../rentals");
-  }
-
   if(props.productData === 'product') {
-    callbackKeyDown = changeToRentalOnEnter;
-    callbackSearch = changeToRentals;
-    callbackSelect = changeToRentals;
+    userInteraction = [];
   }
 
   /**
