@@ -19,7 +19,11 @@ function SneakerList(props) {
         //   pathname: "/shoe" + shoe.name,
         //   image: shoe.SneakerImage
         // };
-        return <Link to="/shoe" state={{name: shoe.name.toString()}}>
+        return <Link to="/shoe" state={{
+          name: shoe.name.toString(),
+          image: shoe.sneakerImage.toString(),
+          price: shoe.price.toString()
+          }}>
                 <SneakerItem key={shoe.id.toString()} 
                   name={shoe.name} 
                   sneakerImage={shoe.sneakerImage} 

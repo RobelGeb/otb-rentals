@@ -35,8 +35,9 @@ function ProductPage (props) {
 
 
     console.log(location.state.name);
-
-
+    console.log(location.state.image);
+    console.log(location.state.price);
+    console.log(location.state);
     const images = [
         {
           id: 0,
