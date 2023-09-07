@@ -85,3 +85,12 @@ a {
   flex-direction: column;
 
 }
+
+.cart {
+  position: fixed;
+  top: 57px;
+  right: 0;
+  padding: 10px;
+  width: 25%;
+  background: lightgrey;
+}

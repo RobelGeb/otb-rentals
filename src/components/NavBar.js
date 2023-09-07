@@ -4,12 +4,13 @@ import sneaker from '../img/blue-jordan-1.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import Cart from './Cart.js';
 
 function NavBar(props) {
 
   const[showCart, setShowCart] = useState(false);
 
-  console.log(props.cart);
+  //console.log(props.cart);
 
   return (
     <header>
@@ -21,7 +22,7 @@ function NavBar(props) {
             </div>
             <div id="cart-items">
               {
-                showCart && props.cart
+                showCart && <Cart cart={props.cart}/>
               }
             </div>
           </Link>
