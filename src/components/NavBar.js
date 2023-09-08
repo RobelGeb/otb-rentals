@@ -10,20 +10,26 @@ function NavBar(props) {
 
   const[showCart, setShowCart] = useState(false);
 
-  //console.log(props.cart);
+  function show() {
+    if (props.cart.size !== 0) {
+      setShowCart(true);
+    }
+  }
+
+  function cover() {
+    setShowCart(false);
+  }
 
   return (
     <header>
       <div class="topnav">
         <Link id="home-link" to="/"><img id="sneaker-logo" src={sneaker} alt="sneaker logo"/></Link>
-          <Link to="/cart" id="cart" onMouseEnter={() => setShowCart(true)} onMouseLeave={() => setShowCart(false)}>
+          <Link to="/cart" id="cart" onMouseEnter={show} onMouseLeave={cover}>
             <div id="cart-total">
               <FontAwesomeIcon icon={faCartShopping} size="lg"/>
             </div>
             <div id="cart-items">
-              {
-                showCart && <Cart cart={props.cart}/>
-              }
+              { showCart && <Cart cart={props.cart}/> }
             </div>
           </Link>
         <Link to="/support">SUPPORT</Link>

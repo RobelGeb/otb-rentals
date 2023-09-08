@@ -75,16 +75,6 @@ a {
 }
 
 /* ------- popup styling -------- */
-#cart {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#popup {
-  display: flex;
-  flex-direction: column;
-
-}
 
 .cart {
   position: fixed;
@@ -94,3 +84,4 @@ a {
   width: 25%;
   background: lightgrey;
 }
+
