@@ -24,14 +24,16 @@ function NavBar(props) {
     <header>
       <div class="topnav">
         <Link id="home-link" to="/"><img id="sneaker-logo" src={sneaker} alt="sneaker logo"/></Link>
-          <Link to="/cart" id="cart" onMouseEnter={show} onMouseLeave={cover}>
-            <div id="cart-total">
-              <FontAwesomeIcon icon={faCartShopping} size="lg"/>
-            </div>
-            <div id="cart-items">
-              { showCart && <Cart cart={props.cart}/> }
-            </div>
+        <div id="cart" onMouseEnter={show} onMouseLeave={cover}>
+          <Link to="/cart">
+            <FontAwesomeIcon icon={faCartShopping} size="lg"/>
           </Link>
+          <div id="cart-items">
+            { showCart && <Cart cart={props.cart}/> }
+          </div>
+        </div>
+        
+          
         <Link to="/support">SUPPORT</Link>
         <Link to="/about">ABOUT</Link>
         <Link to="/rentals">RENTALS</Link>
