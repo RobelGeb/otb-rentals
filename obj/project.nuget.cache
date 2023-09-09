@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "8PvCgVTcQBf1GVg47ltMcGgPMATl9ifw2ChiZU+KU7p9lWivpK7kyzasQDxYbHlWxYy3AZ4azIJubBmky+8mXA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\robelg\\otb-rentals\\otb-rentals.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\robelg\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\robelg\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\robelg\\.nuget\\packages\\stripe.net\\42.4.0\\stripe.net.42.4.0.nupkg.sha512",
+    "C:\\Users\\robelg\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\robelg\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\robelg\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\robelg\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "C:\\Users\\robelg\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\robelg\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

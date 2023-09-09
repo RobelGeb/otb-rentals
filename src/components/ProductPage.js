@@ -2,20 +2,22 @@ import React, { useState } from 'react';
 import Footer from './Footer';
 import NavBar from './NavBar';
 import AddButton from './AddButton';
-import './ProductPage.css';
 import ProductCarousel from './ProductCarousel';
 import SearchBar from './SearchBar';
 import Sneakers from '../data.json';
+import './ProductPage.css';
 
 import {useLocation} from 'react-router-dom';
-
+import { useParams } from 'react-router-dom';
 
 // import yeezy350pics 
-import yeezy350side from '../img/sneakers/yeezy350/yeezy350bred_side.png';
-import yeezy350rear from '../img/sneakers/yeezy350/yeezy350bred_rear.png';
+// import yeezy350side from '../img/sneakers/yeezy350/yeezy350bred_side.png';
+// import yeezy350rear from '../img/sneakers/yeezy350/yeezy350bred_rear.png';
 
 function ProductPage (props) {
 
+    const params = useParams();
+    console.log(params);
 
     // var mage = JSON.parse(Sneakers);
     // console.log(JSON.parse(Sneakers));
@@ -34,10 +36,11 @@ function ProductPage (props) {
     const location = useLocation()
 
 
-    console.log(location.state.name);
-    console.log(location.state.image);
-    console.log(location.state.price);
-    console.log(location.state);
+    // console.log(location.state.name);
+    // console.log(location.state.image);
+    // console.log(location.state.price);
+    // console.log(location.state);
+    
     const images = [
         {
           id: 0,
@@ -63,23 +66,23 @@ function ProductPage (props) {
     ];
     
     
-    const yeezy350pics = [
-        {
-            id: 0,
-            thumbnail: imgurl,
-            name: 'yeezy350'
-        },
-        {
-            id: 1,
-            thumbnail: imgurl,
-            name: 'yeezy350'
-        },
-        {
-            id: 2,
-            thumbnail: imgurl,
-            name: 'yeezy350'
-        }
-    ];
+    // const yeezy350pics = [
+    //     {
+    //         id: 0,
+    //         thumbnail: imgurl,
+    //         name: 'yeezy350'
+    //     },
+    //     {
+    //         id: 1,
+    //         thumbnail: imgurl,
+    //         name: 'yeezy350'
+    //     },
+    //     {
+    //         id: 2,
+    //         thumbnail: imgurl,
+    //         name: 'yeezy350'
+    //     }
+    // ];
 
     //which image is currently the thumbnail
     const[sliderData, setSliderData] = useState(images[0]);

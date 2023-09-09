@@ -1,0 +1,8 @@
+button {
+    margin-top: 500px;
+}
+
+#checkout {
+    display: flex;
+    flex-direction: column;
+}

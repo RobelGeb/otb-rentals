@@ -5,6 +5,7 @@ import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import RentalsPage from './components/RentalsPage';
 import ProductPage from './components/ProductPage';
+import CheckoutPage from './components/CheckoutPage';
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
           <Route path="/about" element={<AboutPage cart={cart} setCart={setCart}/>} />
           <Route path="/rentals" element={<RentalsPage cart={cart} setCart={setCart}/>} />
           <Route path="/sneaker" element={<ProductPage cart={cart} setCart={setCart}/>} />
+          <Route path="/checkout" element={<CheckoutPage cart={cart} setCart={setCart}/>} />
       </Routes>
   );
 }

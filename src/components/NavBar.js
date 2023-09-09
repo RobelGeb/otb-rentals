@@ -25,15 +25,13 @@ function NavBar(props) {
       <div class="topnav">
         <Link id="home-link" to="/"><img id="sneaker-logo" src={sneaker} alt="sneaker logo"/></Link>
         <div id="cart" onMouseEnter={show} onMouseLeave={cover}>
-          <Link to="/cart">
+          <Link to="/checkout">
             <FontAwesomeIcon icon={faCartShopping} size="lg"/>
           </Link>
           <div id="cart-items">
             { showCart && <Cart cart={props.cart}/> }
           </div>
         </div>
-        
-          
         <Link to="/support">SUPPORT</Link>
         <Link to="/about">ABOUT</Link>
         <Link to="/rentals">RENTALS</Link>
