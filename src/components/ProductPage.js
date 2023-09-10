@@ -4,13 +4,12 @@ import NavBar from './NavBar';
 import AddButton from './AddButton';
 import ProductCarousel from './ProductCarousel';
 import SearchBar from './SearchBar';
-import Sneakers from '../data.json';
 import './ProductPage.css';
 
 import {useLocation} from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
-// import yeezy350pics 
+// import yeezy350pics
 // import yeezy350side from '../img/sneakers/yeezy350/yeezy350bred_side.png';
 // import yeezy350rear from '../img/sneakers/yeezy350/yeezy350bred_rear.png';
 
@@ -23,12 +22,7 @@ function ProductPage (props) {
     // console.log(JSON.parse(Sneakers));
 
 
-    const result = JSON.stringify(Sneakers);
-
     //console.log(JSON.parse(result));
-
-    const parse_result = JSON.parse(result);
-    const imgurl = parse_result[0].sneakerImage;
 
     // const sneakmap = new Map(Object.entries(JSON.parse(Sneakers)));
     // console.log(sneakmap);
@@ -40,7 +34,7 @@ function ProductPage (props) {
     // console.log(location.state.image);
     // console.log(location.state.price);
     // console.log(location.state);
-    
+
     const images = [
         {
           id: 0,
@@ -64,8 +58,8 @@ function ProductPage (props) {
           quantity: 0
         },
     ];
-    
-    
+
+
     // const yeezy350pics = [
     //     {
     //         id: 0,
@@ -96,7 +90,7 @@ function ProductPage (props) {
                 {location.state.price}
             </div>
             <div>
-                <ProductCarousel 
+                <ProductCarousel
                     images={images}
                     sliderData={sliderData}
                     setSliderData={setSliderData} />

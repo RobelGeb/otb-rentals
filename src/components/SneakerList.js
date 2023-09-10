@@ -5,33 +5,30 @@ import { Link } from 'react-router-dom';
 function SneakerList(props) {
 
   let userResults = props.userResults;
+  console.log("userResults");
+  console.log(userResults);
 
   if(userResults === undefined) {
     userResults = props.originalResults;
   }
 
-  
 
   return(
     <div class='sneaker-grid'>
       {userResults && userResults.map((shoe) => {
-        // const newTo = {
-        //   pathname: "/shoe" + shoe.name,
-        //   image: shoe.SneakerImage
-        // };
-        return <Link to="/sneaker" 
+        return <Link to="/sneaker"
                 state={{
                   name: shoe.name.toString(),
                   image: shoe.sneakerImage.toString(),
                   price: shoe.price.toString()
-                  
+
                 }}>
-                <SneakerItem key={shoe.id.toString()} 
-                  name={shoe.name} 
-                  sneakerImage={shoe.sneakerImage} 
-                  condition={shoe.condition} 
-                  price={shoe.price} 
-                  brand={shoe.brand} 
+                <SneakerItem key={shoe.id.toString()}
+                  name={shoe.name}
+                  sneakerImage={shoe.sneakerImage}
+                  condition={shoe.condition}
+                  price={shoe.price}
+                  brand={shoe.brand}
                 />
               </Link>
       })}

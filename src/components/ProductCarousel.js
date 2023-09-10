@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './ProductPage.css';
 
 //import ReactImageGallery from 'react-image-gallery';
@@ -20,12 +19,12 @@ function ProductCarousel (props) {
                     props.images.map(
                         (data,i) => <img key={data.id} src={data.thumbnail} onClick={() => handleClick(i)} height="200" alt="" />
                     )
-                }                
+                }
             </div>
 
         </div>
-        // <ReactImageGallery 
-        //     items={images} 
+        // <ReactImageGallery
+        //     items={images}
         //     showPlayButton={false}
         //     showFullscreenButton={false}
         // />

@@ -1,5 +1,5 @@
 //import the state hook function
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import '../App.css';
 import SneakerList from './SneakerList';
@@ -15,20 +15,21 @@ function SearchBar(props) {
 
   let dataObject = Sneakers;
 
+  if(props.userInput !== null && props.userInput !== undefined) {
+    dataObject = props.userInput;
+  }
+
   let [userInteraction, setResults] = useState(dataObject);
-  // let navigate = useNavigate();
+  const navigate = useNavigate();
+
+  if(props.productData === 'product') {
+    userInteraction = [];
+  }
 
   const callbackKeyDown = (event) => {
     if(event.key === "Enter") {
 
-      // TODO: Need to fix, show results when navigating back to rental page
-      /*
-      if(props.productData === 'product') {
-        navigate("../rentals");
-      }
-      */
-
-      const inputResultsCopy = dataObject.filter((kicks) => {
+      const inputResults = dataObject.filter((kicks) => {
         let sneakerName = kicks.name.toLowerCase();
         let userInput = event.target.value.toLowerCase();
         if(sneakerName.includes(userInput))  {
@@ -36,23 +37,20 @@ function SearchBar(props) {
         } else {
           return false;
         }
-      });
+      })
 
-      setResults(inputResultsCopy); // set, update -> in this case "input" on 'Enter' key
+      setResults(inputResults); // set, update -> in this case "input" on 'Enter' key
 
+      // TODO: Need to fix, show results when navigating back to rental page -> not updating state before we navigate
+      if(props.productData === 'product') {
+        navigate("../rentals", {state: inputResults});
+      }
     }
   }
 
   const callbackSearch = () => {
 
-    // TODO: Need to fix, show results when navigating back to rental page
-    /*
-    if(props.productData === 'product') {
-      navigate("../rentals");
-    }
-    */
-
-    const searchResultsCopy = dataObject.filter((kicks) => {
+    const searchResults = dataObject.filter((kicks) => {
       let sneakerName = kicks.name.toLowerCase();
       let searchInput = id('search-bar-input').value.toLowerCase(); // "change" stores input field value
       if(sneakerName.includes(searchInput)) {
@@ -62,19 +60,17 @@ function SearchBar(props) {
       }
     });
 
-    setResults(searchResultsCopy); // set, update -> in this case "search"
+    setResults(searchResults); // set, update -> in this case "search"
+
+    // TODO: Need to fix, show results when navigating back to rental page
+    if(props.productData === 'product') {
+      navigate("../rentals", {state: searchResults});
+    }
   }
 
   const callbackSelect = (event) => {
 
-    // TODO: Need to fix, show results when navigating back to rental page
-    /*
-    if(props.productData === 'product') {
-      navigate("../rentals");
-    }
-    */
-
-    const selectResultsCopy = dataObject.filter((kicks) => {
+    const selectResults = dataObject.filter((kicks) => {
       let selectedValue = event.target.value;
       if(selectedValue === "all" || kicks.brand === selectedValue) {
         return true;
@@ -83,11 +79,12 @@ function SearchBar(props) {
       }
     });
 
-    setResults(selectResultsCopy); // set, update -> in this case "select"
-  }
+    setResults(selectResults); // set, update -> in this case "select"
 
-  if(props.productData === 'product') {
-    userInteraction = [];
+    // TODO: Need to fix, show results when navigating back to rental page
+    if(props.productData === 'product') {
+      navigate("../rentals", {state: selectResults});
+    }
   }
 
   /**
