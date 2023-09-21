@@ -5,18 +5,14 @@ import { Link } from 'react-router-dom';
 function SneakerList(props) {
 
   let userResults = props.userResults;
-  console.log("userResults");
-  console.log(userResults);
-
   if(userResults === undefined) {
     userResults = props.originalResults;
   }
 
-
   return(
     <div class='sneaker-grid'>
       {userResults && userResults.map((shoe) => {
-        return <Link to="/sneaker"
+        return <Link to="/shoe"
                 state={{
                   name: shoe.name.toString(),
                   image: shoe.sneakerImage.toString(),

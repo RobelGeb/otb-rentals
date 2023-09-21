@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 import Footer from './Footer';
 import { useLocation } from "react-router-dom";
 
-function RentalsPage(props) {
+function SneakersPage(props) {
 
   const location = useLocation();
 
@@ -18,4 +18,4 @@ function RentalsPage(props) {
   )
 }
 
-export default RentalsPage;
+export default SneakersPage;

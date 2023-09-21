@@ -34,7 +34,7 @@ function NavBar(props) {
         </div>
         <Link to="/support">SUPPORT</Link>
         <Link to="/about">ABOUT</Link>
-        <Link to="/rentals">RENTALS</Link>
+        <Link to="/sneakers">SNEAKERS</Link>
       </div>
     </header>
   )

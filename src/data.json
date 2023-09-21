@@ -3,96 +3,96 @@
     "id": 1,
     "name": "Adidas Yeezy Boost 700 Wave Runner (2017/2023)",
     "sneakerImage": "./images/yeezy-700-waverunner.jpeg",
-    "condition": "Lightly Worn",
-    "price": "$100",
+    "condition": "New",
+    "price": "$500",
     "brand": "adidas"
-  }, 
+  },
   {
     "id": 2,
     "name": "Adidas Yeezy Boost 350 V2 Black Red (2017/2020)",
     "sneakerImage": "./images/yeezy-350-bred.jpeg",
-    "condition": "Lightly Worn",
-    "price": "$100",
+    "condition": "New",
+    "price": "$440",
     "brand": "adidas"
-  }, 
+  },
   {
     "id": 3,
     "name": "Nike SB Dunk Low Ben & Jerry's Chunky Dunky",
     "sneakerImage": "./images/ben-jerry-dunks.jpeg",
-    "condition": "Lightly Worn",
-    "price": "$250",
+    "condition": "New",
+    "price": "$1900",
     "brand": "nike"
-  }, 
+  },
   {
     "id": 4,
     "name": "Jordan 4 Retro Bred (2019)",
     "sneakerImage": "./images/bred-4.jpeg",
-    "condition": "Lightly Worn",
-    "price": "$100",
+    "condition": "New",
+    "price": "$700",
     "brand": "jordan"
-  }, 
+  },
   {
     "id": 5,
     "name": "Jordan 4 Retro Fire Red (2020)",
     "sneakerImage": "./images/fire-red-4.jpeg",
-    "condition": "Good",
-    "price": "$80",
+    "condition": "New",
+    "price": "$600",
     "brand": "jordan"
-  }, 
+  },
   {
     "id": 6,
     "name": "Jordan 11 Retro Playoffs Bred (2019)",
     "sneakerImage": "./images/bred-11.jpeg",
-    "condition": "Good",
-    "price": "$80",
+    "condition": "New",
+    "price": "$600",
     "brand": "jordan"
-  }, 
+  },
   {
     "id": 7,
     "name": "Jordan 4 Retro Travis Scott Cactus Jack",
     "sneakerImage": "./images/travis-4.jpeg",
-    "condition": "Good",
-    "price": "$200",
+    "condition": "New",
+    "price": "$1300",
     "brand": "jordan"
-  }, 
+  },
   {
     "id": 8,
     "name": "Jordan 1 Retro High OG SP Travis Scott Mocha",
     "sneakerImage": "./images/travis-high-mocha.jpeg",
-    "condition": "Good",
-    "price": "$250",
+    "condition": "New",
+    "price": "$2200",
     "brand": "jordan"
-  }, 
+  },
   {
     "id": 9,
     "name": "Jordan 1 Retro Low OG SP Travis Scott Mocha",
     "sneakerImage": "./images/travis-low-mocha.jpeg",
-    "condition": "Good",
-    "price": "$250",
+    "condition": "New",
+    "price": "$2500",
     "brand": "jordan"
-  },  
+  },
   {
     "id": 10,
     "name": "Nike Air Force 1 Low Off-White Black White",
     "sneakerImage": "./images/af1-ow-black.jpeg",
-    "condition": "Lightly Worn",
-    "price": "$200",
+    "condition": "New",
+    "price": "$1300",
     "brand": "nike"
-  },  
+  },
   {
     "id": 11,
     "name": "Nike Air Force 1 Low Off-White MCA University Blue",
     "sneakerImage": "./images/af1-ow-mca.jpeg",
-    "condition": "Lightly Worn",
-    "price": "$225",
+    "condition": "New",
+    "price": "$3000",
     "brand": "nike"
-  },  
+  },
   {
     "id": 12,
     "name": "Jordan 1 Retro Low OG SP Travis Scott Mocha",
     "sneakerImage": "./images/unc-ow-jordan-1.jpeg",
-    "condition": "Lightly Worn",
-    "price": "$300",
+    "condition": "New",
+    "price": "$2500",
     "brand": "jordan"
   }
 ]

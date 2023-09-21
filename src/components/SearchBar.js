@@ -41,9 +41,9 @@ function SearchBar(props) {
 
       setResults(inputResults); // set, update -> in this case "input" on 'Enter' key
 
-      // navigate to rentals page, passing results data
+      // navigate to sneakers page, passing results data
       if(props.productData === 'product') {
-        navigate("../rentals", {state: inputResults});
+        navigate("../sneakers", {state: inputResults});
       }
     }
   }
@@ -62,9 +62,9 @@ function SearchBar(props) {
 
     setResults(searchResults); // set, update -> in this case "search"
 
-    // navigate to rentals page, passing results data
+    // navigate to sneakers page, passing results data
     if(props.productData === 'product') {
-      navigate("../rentals", {state: searchResults});
+      navigate("../sneakers", {state: searchResults});
     }
   }
 
@@ -81,9 +81,9 @@ function SearchBar(props) {
 
     setResults(selectResults); // set, update -> in this case "select"
 
-    // navigate to rentals page, passing results data
+    // navigate to sneakers page, passing results data
     if(props.productData === 'product') {
-      navigate("../rentals", {state: selectResults});
+      navigate("../sneakers", {state: selectResults});
     }
   }
 
