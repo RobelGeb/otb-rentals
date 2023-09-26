@@ -37,7 +37,7 @@
           }
         }
       },
-      "Stripe.net/42.4.0": {
+      "Stripe.net/42.6.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
@@ -252,10 +252,10 @@
         "packageIcon.png"
       ]
     },
-    "Stripe.net/42.4.0": {
-      "sha512": "LvTOffXbPgtz9HjaFCQbbN1g6EV6se2f6cP45LRcnYirrQcqi/0zHFjPcXMxuC+8jRAErXvXeQvHUcxDi4b11Q==",
+    "Stripe.net/42.6.0": {
+      "sha512": "phVRbfJaS7Rm3yEY37F3Qp5VizSAIgC+CWDpFRIEOoCRYDQgv9qyRpe9XrZ9Z0udyT6G53+DC2+ntELfIX4ivQ==",
       "type": "package",
-      "path": "stripe.net/42.4.0",
+      "path": "stripe.net/42.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -271,7 +271,7 @@
         "lib/netcoreapp3.1/Stripe.net.xml",
         "lib/netstandard2.0/Stripe.net.dll",
         "lib/netstandard2.0/Stripe.net.xml",
-        "stripe.net.42.4.0.nupkg.sha512",
+        "stripe.net.42.6.0.nupkg.sha512",
         "stripe.net.nuspec"
       ]
     },
@@ -458,7 +458,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Stripe.net >= 42.4.0"
+      "Stripe.net >= 42.6.0"
     ]
   },
   "packageFolders": {
@@ -500,7 +500,7 @@
         "dependencies": {
           "Stripe.net": {
             "target": "Package",
-            "version": "[42.4.0, )"
+            "version": "[42.6.0, )"
           }
         },
         "imports": [

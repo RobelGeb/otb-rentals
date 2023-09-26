@@ -10,7 +10,6 @@ function AddButton(props) {
         //if there's already that shoe in the cart, add even more onto that based on how many times
         //the "add to cart" button was clicked. else, just add from 0.
         if (props.cart.has(props.shoeName)) {
-
             cartMap.set(props.shoeName, cartMap.get(props.shoeName) + 1);
         } else {
             cartMap.set(props.shoeName, 1);

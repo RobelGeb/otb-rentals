@@ -1,5 +1,6 @@
 import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
+import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import './CheckoutPage.css';
 
@@ -12,7 +13,7 @@ function CartPage(props) {
         const stripe = await stripePromise;
         const result = await stripe.redirectToCheckout({
             lineItems: [{
-                price: 'price_1NoH85JL9cid2s5PWJGd8lNF', 
+                price: 'price_1NoRaMJL9cid2s5P0CZmKmC1', 
                 quantity: 1
             }], 
             mode: 'payment',
@@ -27,8 +28,10 @@ function CartPage(props) {
     return(
         <div id="checkout">
             <NavBar cart={props.cart}/>
-            <button onClick={handleClick}>Checkout</button>
-
+            <Link to="https://buy.stripe.com/test_bIY2bcaqU7qw9nW000"><button>Checkout</button></Link>
+            {/* <form action="http://localhost:3000/create-checkout-session" method="POST">
+                <button type="submit">Checkout</button>
+            </form> */}
 
         </div>
     );
