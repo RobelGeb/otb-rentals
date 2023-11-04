@@ -19,7 +19,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45px;
 }
 
 footer > p {

@@ -12,7 +12,7 @@ function SneakerList(props) {
   return(
     <div class='sneaker-grid'>
       {userResults && userResults.map((shoe) => {
-        return <Link to="/shoe"
+        return <Link className="shoe-link-tag" to="/shoe"
                 state={{
                   name: shoe.name.toString(),
                   image: shoe.sneakerImage.toString(),

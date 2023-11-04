@@ -15,7 +15,7 @@ function SupportPage() {
     event.preventDefault();
 
     // send email
-    emailjs.sendForm('service_5lv3vrn', 'template_861fyhv', form.current, 'cfT2HrTlTOnJAcPwD')
+    emailjs.sendForm('service_vjq34v8', 'template_99x2zbv', form.current, 'Oj-SnHQDR7wadDfg1')
       .then((result) => {
         console.log(result.text);
         console.log("message sent");
