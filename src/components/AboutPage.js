@@ -10,10 +10,9 @@ function AboutPage(props) {
     <div id="about">
       <NavBar cart={props.cart}/>
       <section id="about-page">
-
         <div id="mission-description">
           <h2>Our Mission</h2>
-          <p>
+          <p id="first-desc">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
             ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -31,7 +30,7 @@ function AboutPage(props) {
             <div class="team-member-description">
               <h3>Bryan Phan (CEO), Software Engineer</h3>
               <img id="bp-image" src={bp} alt="Bryan Phan"/>
-              <p>
+              <p id="bp-desc">
                 Recent University of Washington graduate (2023), received a degree in Informatics.
               </p>
             </div>
