@@ -3,7 +3,7 @@ import './NavBar.css';
 import sneaker from '../img/blue-jordan-1.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 import Cart from './Cart.js';
 
 function NavBar(props) {
@@ -32,7 +32,7 @@ function NavBar(props) {
             <li>
               <div id="cart" onMouseEnter={show} onMouseLeave={cover}>
                 <Link to="/checkout">
-                  <FontAwesomeIcon icon={faCartShopping} size="lg"/>
+                  <FontAwesomeIcon icon={faBagShopping} size='xl'/>
                 </Link>
                 <div id="cart-items">
                   { showCart && <Cart cart={props.cart}/> }
