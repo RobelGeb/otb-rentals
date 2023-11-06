@@ -32,7 +32,7 @@ function SupportPage() {
   };
 
   return (
-    <div>
+    <div id="support-parent">
       <NavBar/>
       <div id="support-container">
         <div id="support-intro">
@@ -78,6 +78,23 @@ function SupportPage() {
           </form>
         </div>
 
+        <div id="faq-div">
+          <h3>Frequently Asked Questions:</h3>
+          <ul>
+            <li>
+              <p>How long does shipping usually take?</p>
+              <p>Shipping usually takes 1-2 weeks depending on where our customer is located.</p>
+            </li>
+            <li>
+              <p>Are all shoes sold authentic?</p>
+              <p>Yes, all shoes sold are authenticated thoroughly by our sneaker experts.</p>
+            </li>
+            <li>
+              <p>Are there refunds?</p>
+              <p>There are no refunds, all sneakers sold are final.</p>
+            </li>
+          </ul>
+        </div>
       </div>
       <Footer/>
     </div>

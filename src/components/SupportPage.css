@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+#support-parent, #support-container {
+  height: 100%;
+}
+
 #support-container {
   padding-top: 90px;
 }
@@ -79,4 +83,9 @@ textarea {
   &:focus {
     border: 2px solid #0C77F3;
   }
+}
+
+#faq-div {
+  margin-top: 30px;
+  margin-bottom: 100px;
 }
