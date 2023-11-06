@@ -19,6 +19,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 45px;
 }
 
 footer > p {
@@ -84,6 +85,11 @@ footer > p {
 
 
  /* -------------- SEARCH BAR --------------- */
+
+ #search-bar-container {
+  margin-top: 30px;
+ }
+
 input {
   margin-left: 60px;
   margin-top: 80px;

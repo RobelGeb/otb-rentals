@@ -22,20 +22,26 @@ function NavBar(props) {
 
   return (
     <header>
-      <div class="topnav">
-        <Link id="home-link" to="/"><img id="sneaker-logo" src={sneaker} alt="sneaker logo"/></Link>
-        <div id="cart" onMouseEnter={show} onMouseLeave={cover}>
-          <Link to="/checkout">
-            <FontAwesomeIcon icon={faCartShopping} size="lg"/>
-          </Link>
-          <div id="cart-items">
-            { showCart && <Cart cart={props.cart}/> }
-          </div>
-        </div>
-        <Link to="/support">SUPPORT</Link>
-        <Link to="/about">ABOUT</Link>
-        <Link to="/sneakers">SNEAKERS</Link>
-      </div>
+      <nav>
+        <ul className='nav-bar'>
+          <li id='home-link'><Link to="/"><img id="sneaker-logo" src={sneaker} alt="sneaker logo"/></Link></li>
+          <span className='menu'>
+            <li><Link to="/sneakers">Sneakers</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/support">Support</Link></li>
+            <li>
+              <div id="cart" onMouseEnter={show} onMouseLeave={cover}>
+                <Link to="/checkout">
+                  <FontAwesomeIcon icon={faCartShopping} size="lg"/>
+                </Link>
+                <div id="cart-items">
+                  { showCart && <Cart cart={props.cart}/> }
+                </div>
+              </div>
+            </li>
+          </span>
+        </ul>
+      </nav>
     </header>
   )
 }

@@ -10,7 +10,6 @@ function SneakerItem(props) {
         <p class="shoe-price">{ props.condition }</p>
         <p class="shoe-price" id="price">{ props.price }</p>
       </div>
-
     </div>
   )
 }

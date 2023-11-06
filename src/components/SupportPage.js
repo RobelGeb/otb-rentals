@@ -32,9 +32,7 @@ function SupportPage() {
 
   return (
     <div>
-
-      <NavBar />
-
+      <NavBar/>
       <div id="support-container">
         <div id="support-intro">
           <h2>Out The Box Support Team</h2>
