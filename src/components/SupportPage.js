@@ -2,6 +2,7 @@ import './SupportPage.css';
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import NavBar from './NavBar';
+import Footer from './Footer';
 
 function SupportPage() {
 
@@ -78,6 +79,7 @@ function SupportPage() {
         </div>
 
       </div>
+      <Footer/>
     </div>
   )
 }

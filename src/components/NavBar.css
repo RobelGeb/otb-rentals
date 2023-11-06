@@ -1,18 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /* Gets rid of extra white space on side of screen */
 html {
   overflow-x: hidden;
 }
 
 .nav-bar {
+  box-sizing: border-box;
   width: 100%;
   height: 70px;
   display: flex;
